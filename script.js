@@ -1,11 +1,12 @@
 (function () {
   "use strict";
 
-  const header = document.getElementById("header");
-  const navToggle = document.querySelector(".nav-toggle");
-  const navMenu = document.getElementById("nav-menu");
+  var header = document.getElementById("header");
+  var navToggle = document.querySelector(".nav-toggle");
+  var navMenu = document.getElementById("nav-menu");
 
   function onScroll() {
+    if (!header) return;
     if (window.scrollY > 20) {
       header.classList.add("scrolled");
     } else {
@@ -14,7 +15,8 @@
   }
 
   function toggleMenu() {
-    const open = navToggle.getAttribute("aria-expanded") === "true";
+    if (!navToggle || !navMenu) return;
+    var open = navToggle.getAttribute("aria-expanded") === "true";
     navToggle.setAttribute("aria-expanded", !open);
     navMenu.classList.toggle("open", !open);
     document.body.style.overflow = open ? "" : "hidden";
@@ -115,9 +117,10 @@
 
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", toggleMenu);
-    navMenu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeMenu);
-    });
+    var navLinks = navMenu.querySelectorAll("a");
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].addEventListener("click", closeMenu);
+    }
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
