@@ -102,6 +102,18 @@ a:hover {
   color: var(--green-800);
 }
 
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+
+.logo:has(.logo-img[style*="display: none"]) .logo-icon {
+  display: inline !important;
+}
+
 .logo-icon {
   color: var(--gold);
   font-size: 1.1em;
@@ -330,6 +342,18 @@ a:hover {
   color: var(--white);
 }
 
+.quick-links-grid a.active {
+  background: var(--gold);
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.3);
+}
+
+.quick-links-grid a.active:hover {
+  background: var(--gold-dark);
+  color: var(--white);
+}
+
 /* ----- Divisi (cards) ----- */
 .layanan {
   padding: 4rem 0;
@@ -372,6 +396,31 @@ a:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-4px);
   border-color: var(--green-100);
+}
+
+/* Card active state (matches action menu when clicked) */
+.card--active {
+  border: 2px solid var(--gold);
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.3), var(--shadow-hover);
+}
+
+/* Brief pulse when first focused from Akses cepat */
+.card--focused {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.35), var(--shadow-hover);
+  animation: card-focus-pulse 0.6s ease-out;
+}
+
+@keyframes card-focus-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 160, 23, 0.5), var(--shadow-hover);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(212, 160, 23, 0), var(--shadow-hover);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.35), var(--shadow-hover);
+  }
 }
 
 .card-icon {
