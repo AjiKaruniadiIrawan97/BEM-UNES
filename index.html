@@ -9,7 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css" id="main-css">
+    <script>
+      (function () {
+        if (location.hostname === 'github.io' || location.pathname.indexOf('/BEM-UNES') === 0) {
+          document.getElementById('main-css').href = '/BEM-UNES/styles.css';
+        }
+      })();
+    </script>
 </head>
 
 <body>
@@ -214,7 +221,16 @@
         </div>
     </footer>
 
-    <script src="./script.js"></script>
+    <script>
+      (function () {
+        var base = (location.hostname === 'github.io' || location.pathname.indexOf('/BEM-UNES') === 0)
+          ? '/BEM-UNES/' : './';
+        var s = document.createElement('script');
+        s.src = base + 'script.js';
+        s.async = false;
+        document.body.appendChild(s);
+      })();
+    </script>
 </body>
 
 </html>
