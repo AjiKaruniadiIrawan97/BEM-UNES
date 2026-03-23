@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="palette-default">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halo Advo — Advokesma BEM FH UNNES 2025</title>
+    <title>Halo Advo — SIAP BEM FH UNNES 2025</title>
     <link rel="icon" href="https://unavatar.io/x/bemfhunneske5" type="image/png" sizes="any">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css" id="main-css">
     <script>
-      (function () {
-        if (location.hostname === 'github.io' || location.pathname.indexOf('/BEM-UNES') === 0) {
-          document.getElementById('main-css').href = '/BEM-UNES/styles.css';
-        }
-      })();
+        (function() {
+            if (location.hostname === 'github.io' || location.pathname.indexOf('/BEM-UNES') === 0) {
+                document.getElementById('main-css').href = '/BEM-UNES/styles.css';
+            }
+        })();
     </script>
 </head>
 
@@ -34,7 +34,28 @@
         </button>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#hero">Beranda</a></li>
-                    <li><a href="#layanan">Divisi</a></li>
+                    <li class="nav-item nav-item--submenu">
+                        <a href="#section-advokasi" class="nav-parent">Advokasi</a>
+                        <ul class="nav-submenu" role="list">
+                            <li><a href="#advokasi-audiensi">Audiensi</a></li>
+                            <li><a href="#advokasi-advocare">Advocare</a></li>
+                            <li><a href="#advokasi-banding-ukt">Banding UKT</a></li>
+                            <li><a href="#advokasi-pilar">Pilar Advokasi</a></li>
+                            <li><a href="#advokasi-saluran">Saluran Adkesma</a></li>
+                            <li><a href="#advokasi-lini-beasiswa">Lini Beasiswa</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item--submenu">
+                        <a href="#section-kesejahteraan" class="nav-parent">Kesejahteraan Mahasiswa</a>
+                        <ul class="nav-submenu" role="list">
+                            <li><a href="#kesjah-advokabar">Advokabar</a></li>
+                            <li><a href="#kesjah-hello-camaba">Hello Camaba</a></li>
+                            <li><a href="#kesjah-klinik-adkesma">Klinik Adkesma</a></li>
+                            <li><a href="#kesjah-justifound">Justifound</a></li>
+                            <li><a href="#kesjah-beasiswa-maroon">Beasiswa Maroon</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section-surat">Surat-Menyurat</a></li>
                     <li><a href="#tentang">Tentang</a></li>
                 </ul>
             </nav>
@@ -44,15 +65,34 @@
     <main>
         <!-- Hero -->
         <section class="hero" id="hero">
-            <div class="hero-bg"></div>
-            <div class="container hero-content">
-                <p class="hero-badge">BEM FH UNNES 2025</p>
-                <h1 class="hero-title">Advokesma</h1>
-                <p class="hero-tagline">Halo Advo</p>
-                <p class="hero-desc">
-                    Penyatuan seluruh kanal divisi bantuan yang disediakan oleh Bidang Advokesma kepada seluruh mahasiswa FH UNNES.
-                </p>
-                <a href="#layanan" class="btn btn-primary">Lihat Divisi</a>
+            <!-- Slide lokal: ganti file di assets/hero/slide-1.png ... slide-3.png -->
+            <div class="hero-carousel" aria-hidden="true">
+                <div class="hero-slides">
+                    <div class="hero-slide is-active" style="background-image: url('assets/hero/slide-1.svg');"></div>
+                    <div class="hero-slide" style="background-image: url('https://picsum.photos/id/1018/1920/1080');"></div>
+                    <div class="hero-slide" style="background-image: url('https://picsum.photos/id/1015/1920/1080');"></div>
+                </div>
+                <div class="hero-overlay" aria-hidden="true"></div>
+                <div class="hero-pattern" aria-hidden="true"></div>
+            </div>
+            <div class="hero-dots" role="tablist" aria-label="Pilih slide hero">
+                <button type="button" class="hero-dot is-active" role="tab" aria-selected="true" aria-label="Slide 1" data-hero-dot="0"></button>
+                <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2" data-hero-dot="1"></button>
+                <button type="button" class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3" data-hero-dot="2"></button>
+            </div>
+            <div class="hero-content">
+                <div class="hero-content-inner">
+                    <div class="container hero-content-text">
+                        <p class="hero-badge">BEM FH UNNES · 2025</p>
+                        <p class="hero-tagline">Halo Advo</p>
+                        <h1 class="hero-title">SIAP</h1>
+                        <p class="hero-full-name">Sistem Informasi Adkesma Pintar</p>
+                        <p class="hero-desc">
+                            Satu kanal untuk advokasi, kesejahteraan mahasiswa, dan surat-menyurat—terpusat, mengikuti arahan fakultas, dan diperbarui oleh Adkesma BEM FH UNNES.
+                        </p>
+                        <a href="#section-advokasi" class="btn btn-primary">Lihat layanan</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -61,142 +101,198 @@
             <div class="container">
                 <p class="quick-links-label">Akses cepat</p>
                 <div class="quick-links-grid">
-                    <a href="#ukt">Kendala UKT</a>
-                    <a href="#beasiswa">Beasiswa</a>
-                    <a href="#lost-found">Lost and Found</a>
-                    <a href="#kawan">Kawan Peduli</a>
-                    <a href="#perpustakaan">Perpustakaan</a>
-                    <a href="#pengawalan">Pengawalan Isu</a>
-                    <a href="#propaganda">Propaganda</a>
-                    <a href="#aspirasi">Aspirasi</a>
-                    <a href="#bkmf">BKMF</a>
-                    <a href="#surat">Format Surat</a>
+                    <!-- Advokasi -->
+                    <a href="#advokasi-audiensi">Audiensi</a>
+                    <a href="#advokasi-advocare">Advocare</a>
+                    <a href="#advokasi-banding-ukt">Banding UKT</a>
+                    <a href="#advokasi-pilar">Pilar Advokasi</a>
+                    <a href="#advokasi-saluran">Saluran Adkesma</a>
+                    <a href="#advokasi-lini-beasiswa">Lini Beasiswa</a>
+                    <!-- Kesejahteraan Mahasiswa -->
+                    <a href="#kesjah-advokabar">Advokabar</a>
+                    <a href="#kesjah-hello-camaba">Hello Camaba</a>
+                    <a href="#kesjah-klinik-adkesma">Klinik Adkesma</a>
+                    <a href="#kesjah-justifound">Justifound</a>
+                    <a href="#kesjah-beasiswa-maroon">Beasiswa Maroon</a>
+                    <!-- Surat-Menyurat (satu pintu konten) -->
+                    <a href="#surat-informasi">Surat-Menyurat</a>
                 </div>
             </div>
         </section>
 
-        <!-- Divisi -->
-        <section class="layanan" id="layanan">
+        <!-- Advokasi -->
+        <section class="layanan content-section" id="section-advokasi">
             <div class="container">
-                <h2 class="section-title">Divisi Advokesma</h2>
-                <p class="section-subtitle">Pilih divisi yang kamu butuhkan. Semua divisi dikelola Bidang Advokesma BEM FH UNNES.</p>
-
+                <h2 class="section-title">Advokasi</h2>
+                <p class="section-subtitle">Program dan agenda Adkesma BEM FH UNNES: audiensi, pengawasan sarana, banding UKT, pendidikan advokasi, saluran informasi, hingga penyebarluasan beasiswa.</p>
                 <div class="cards">
-                    <!-- UKT -->
-                    <article class="card" id="ukt">
-                        <div class="card-icon" aria-hidden="true">💰</div>
-                        <h3 class="card-title">Kendala UKT</h3>
-                        <p class="card-desc">Segala permasalahan terkait UKT—pembayaran, informasi, pengajuan penyesuaian, penundaan, atau keringanan UKT—dapat dilaporkan dan dibahas melalui Bidang Advokesma BEM FH UNNES.</p>
-                        <div class="card-meta">
-                            <strong>CP:</strong> Raihananda Danar (Line: raihanandra)
-                        </div>
-                        <ul class="card-list">
-                            <li>Berkas menyesuaikan kondisi mahasiswa. Hubungi Advokesma untuk format berkas.</li>
-                        </ul>
-                        <a href="https://bit.ly/PenyesuaianUKT2025" target="_blank" rel="noopener" class="card-link">bit.ly/PenyesuaianUKT2025 →</a>
-                    </article>
-
-                    <!-- Beasiswa -->
-                    <article class="card" id="beasiswa">
-                        <div class="card-icon" aria-hidden="true">📚</div>
-                        <h3 class="card-title">Bantuan Administrasi Beasiswa</h3>
-                        <p class="card-desc">Divisi bantuan bagi mahasiswa FH UNNES yang mengalami kendala dalam pemberkasan administrasi beasiswa atau membutuhkan informasi lebih lanjut terkait beasiswa.</p>
-                        <div class="card-meta">
-                            <strong>CP:</strong> Ardell (Line: ardellr005)
-                        </div>
-                        <ul class="card-list">
-                            <li>Surat Keterangan Mahasiswa Aktif</li>
-                            <li>Surat Rekomendasi Fakultas</li>
-                            <li>Kartu Tanda Mahasiswa</li>
-                        </ul>
-                        <div class="card-links">
-                            <a href="https://bit.ly/GroupBeasiswa2025" target="_blank" rel="noopener" class="card-link">Grup Beasiswa</a>
-                            <a href="https://bit.ly/BUKUBEASISWA2025" target="_blank" rel="noopener" class="card-link">Buku Beasiswa</a>
-                        </div>
-                    </article>
-
-                    <!-- Lost and Found -->
-                    <article class="card" id="lost-found">
-                        <div class="card-icon" aria-hidden="true">🔍</div>
-                        <h3 class="card-title">Lost and Found</h3>
-                        <p class="card-desc">Divisi informasi barang hilang di Fakultas Hukum UNNES, dikelola BEM FH UNNES bersama Faculty Care dan keamanan. Memudahkan penyebaran informasi kehilangan dan penemuan barang di Kampus Tembalang.</p>
-                        <div class="card-meta">
-                            <strong>CP:</strong> Nazwa Amira (Line: nazwamiraa)
-                        </div>
-                        <a href="https://bit.ly/SOPLOSTANDFOUNDTHN2025" target="_blank" rel="noopener" class="card-link">SOP Lost and Found →</a>
-                    </article>
-
-                    <!-- Kawan Peduli Kawan -->
-                    <article class="card" id="kawan">
+                    <article class="card" id="advokasi-audiensi">
                         <div class="card-icon" aria-hidden="true">🤝</div>
-                        <h3 class="card-title">Kawan Peduli Kawan</h3>
-                        <p class="card-desc">Divisi Advokesma BEM FH UNNES untuk aksi solidaritas berupa penggalangan dana bagi mahasiswa FH UNNES yang terdampak bencana.</p>
+                        <h3 class="card-title">Audiensi</h3>
+                        <p class="card-desc">Audiensi merupakan forum dialog strategis yang dilaksanakan sebagai upaya menyampaikan aspirasi, memperjuangkan kepentingan, serta membangun komunikasi konstruktif bagi mahasiswa Fakultas Hukum Universitas Negeri Semarang. Audiensi
+                            tidak hanya dilakukan dengan pimpinan fakultas, tetapi juga dengan lembaga, instansi, maupun mitra eksternal yang relevan, guna memperluas jejaring, membuka ruang kolaborasi, serta mendorong kebijakan dan solusi yang berdampak
+                            nyata bagi mahasiswa.</p>
                         <div class="card-meta">
-                            <strong>CP:</strong> Rakha Harma (Line: rakhaharma)
+                            <strong>CP:</strong> Galio Geld — 088362552052
                         </div>
-                        <ul class="card-list">
-                            <li>Mahasiswa yang mengalami musibah memberatkan</li>
-                            <li>Sakit parah dengan biaya pengobatan sangat besar</li>
-                            <li>Meninggalnya orang tua/wali sebagai sumber utama finansial</li>
-                        </ul>
-                        <a href="https://bit.ly/LaporanKawanPeduliKawan2025" target="_blank" rel="noopener" class="card-link">Laporan Kawan Peduli Kawan →</a>
                     </article>
-
-                    <!-- Perpustakaan -->
-                    <article class="card" id="perpustakaan">
-                        <div class="card-icon" aria-hidden="true">📖</div>
-                        <h3 class="card-title">Aktivasi Perpustakaan Online</h3>
-                        <p class="card-desc">Divisi aduan bagi mahasiswa FH UNNES yang terkendala dalam proses aktivasi akun pada aplikasi perpustakaan FH UNNES.</p>
+                    <article class="card" id="advokasi-advocare">
+                        <div class="card-icon" aria-hidden="true">🏛️</div>
+                        <h3 class="card-title">Advocare</h3>
+                        <p class="card-desc">Advocare merupakan program mitigasi dan pengawasan sarana prasarana di Fakultas Hukum UNNES sebagai langkah preventif sebelum mahasiswa terdampak permasalahan fasilitas. Program ini dilaksanakan melalui penyisiran fasilitas setiap
+                            minggu dengan jadwal petugas terstruktur, serta pencatatan temuan dalam lembar temuan (kondisi, evaluasi, dan rekomendasi) sebagai inventaris yang ditinjau bulanan. Seluruh hasil inventarisasi kemudian diaudiensikan kepada
+                            pimpinan fakultas sebagai dasar tindak lanjut perbaikan fasilitas.</p>
                         <div class="card-meta">
-                            <strong>CP:</strong> Raihanandra Danar, Rakha Harma
+                            <strong>CP:</strong> A. Rasya Dewani — 0895621134547
                         </div>
+                    </article>
+                    <article class="card" id="advokasi-banding-ukt">
+                        <div class="card-icon" aria-hidden="true">💰</div>
+                        <h3 class="card-title">Banding UKT</h3>
+                        <p class="card-desc">Merupakan agenda dari kementerian Adkesma BEM FH UNNES 2026 Kabinet Laksana Adhikara berupa penetapan ulang dan angsuran UKT yang bertujuan untuk membantu para mahasiswa yang memiliki suatu permasalahan UKT. Banding UKT dilakukan
+                            bersama pimpinan yang diadakan setiap semester.</p>
+                        <div class="card-meta card-meta--multiline">
+                            <strong>CP:</strong>
+                            <span class="card-meta-line">Renata Hutami Sarinastiti — 08994183019</span>
+                            <span class="card-meta-line">Arja Rifda Romiza — 081352698813</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1q0kbYfpAhFR6pjsnhl68uIEJFeBv0JRO?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link">Berkas &amp; informasi Banding UKT (Google Drive) →</a>
+                    </article>
+                    <article class="card" id="advokasi-pilar">
+                        <div class="card-icon" aria-hidden="true">📚</div>
+                        <h3 class="card-title">Pilar Advokasi</h3>
+                        <p class="card-desc">Merupakan salah satu kurikulum dari kegiatan Sekolah Rakyat Maroon. SRM menyelenggarakan kelas pilar Advokasi yang menekankan pembentukan karakter advokatif. Melalui kelas ini, Siswa/i SRM diajak untuk memahami bahwa advokasi adalah
+                            sebuah proses yang membutuhkan pengetahuan (kognitif), keterampilan (motorik), dan sikap reflektif. Kemampuan menganalisis masalah, menyusun strategi, hingga menyampaikan kritik dan saran menjadi bagian dari proses belajar
+                            yang esensial. Lebih dari itu, ruang advokasi adalah ruang keberpihakan, tempat mahasiswa berlatih menyuarakan apa yang dialami dengan cara yang santun namun tegas, solutif, dan membangun.</p>
+                        <div class="card-meta">
+                            <strong>CP:</strong> Rully Cipta Ramadhan — 081224726990
+                        </div>
+                    </article>
+                    <article class="card" id="advokasi-saluran">
+                        <div class="card-icon" aria-hidden="true">📢</div>
+                        <h3 class="card-title">Saluran Adkesma</h3>
+                        <p class="card-desc">Saluran WhatsApp Adkesma dibentuk sebagai media distribusi informasi yang terpusat bagi mahasiswa Fakultas Hukum Universitas Negeri Semarang. Saluran ini berfungsi untuk mempermudah pemassifan informasi terkait akademik, keuangan,
+                            fasilitas, kebijakan fakultas, serta isu kemahasiswaan agar tersampaikan secara cepat, jelas, dan merata. Kehadirannya diharapkan dapat memperkuat akses informasi serta mendukung transparansi antara mahasiswa dan fakultas.</p>
+                        <div class="card-meta card-meta--multiline">
+                            <strong>CP:</strong>
+                            <span class="card-meta-line">Nayla Zaskia Nandini — 087727830809</span>
+                            <span class="card-meta-line">Arja Rifda Romiza — 081352698813</span>
+                        </div>
+                        <a href="https://whatsapp.com/channel/0029VbBuCS17dmeU31Ss3p1K" target="_blank" rel="noopener noreferrer" class="card-link">Ikuti saluran WhatsApp ADKESMA BEM FH UNNES →</a>
+                    </article>
+                    <article class="card" id="advokasi-lini-beasiswa">
+                        <div class="card-icon" aria-hidden="true">🎓</div>
+                        <h3 class="card-title">Lini Beasiswa</h3>
+                        <p class="card-desc">Lini Beasiswa Adkesma merupakan agenda yang berfokus pada penyediaan dan penyebarluasan informasi terkait berbagai peluang beasiswa yang dapat diakses oleh mahasiswa Fakultas Hukum. Program ini bertujuan untuk memberikan informasi
+                            yang akurat, terkini, dan komprehensif mengenai jenis beasiswa, persyaratan administrasi, mekanisme pendaftaran, serta jadwal pelaksanaan.</p>
+                        <div class="card-meta">
+                            <strong>CP:</strong> Renata Hutami Sarinastiti — 08994183019
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kesejahteraan Mahasiswa -->
+        <section class="layanan content-section content-section--alt" id="section-kesejahteraan">
+            <div class="container">
+                <h2 class="section-title">Kesejahteraan Mahasiswa</h2>
+                <p class="section-subtitle">Program dan agenda kesejahteraan mahasiswa: distribusi informasi, pendampingan mahasiswa baru, layanan aduan, layanan lost and found, serta dukungan pembiayaan UKT.</p>
+                <div class="cards">
+                    <article class="card" id="kesjah-advokabar">
+                        <div class="card-icon" aria-hidden="true">📰</div>
+                        <h3 class="card-title">Advokabar</h3>
+                        <p class="card-desc">Advokabar merupakan agenda berfungsi sebagai media penyebaran informasi bagi seluruh Keluarga Mahasiswa Fakultas Hukum UNNES. Advokabar memuat berbagai informasi penting, seperti surat edaran, beasiswa, serta isu dan persoalan
+                            yang berkaitan dengan mahasiswa. Pelaksanaan Advokabar dilakukan sepanjang periode kepengurusan dan bersifat kondisional, dengan penyampaian informasi yang diunggah melalui feeds Instagram sebagai media utama. Ke depannya,
+                            apabila platform SIAP telah berjalan, Advokabar juga akan dipublikasikan melalui website tersebut sebagai bagian dari konten informasi mahasiswa.</p>
+                        <div class="card-meta card-meta--multiline">
+                            <strong>CP:</strong>
+                            <span class="card-meta-line">Aida Yulia Fatma — 083878473575</span>
+                            <span class="card-meta-line">Muhammad Bagus Akbar Hamzawiy — 082264149244</span>
+                        </div>
+                    </article>
+                    <article class="card" id="kesjah-hello-camaba">
+                        <div class="card-icon" aria-hidden="true">👋</div>
+                        <h3 class="card-title">Hello Camaba</h3>
+                        <p class="card-desc">Hello Camaba merupakan salah satu program kerja Adkesma untuk menyambut dan pengenalan kampus yang bertujuan untuk membantu dan mendata Calon Mahasiswa Baru untuk memahami dunia perkuliahan dan mempersiapkan diri menjadi mahasiswa.</p>
                         <ul class="card-list">
-                            <li>Unduh aplikasi "Perpustakaan Fakultas Hukum UNNES" di Playstore/AppStore</li>
-                            <li>Registrasi dengan email dan identitas (KTM/KTP)</li>
-                            <li>Login dengan email yang terdaftar</li>
+                            <li>Bertanggung jawab terhadap pertanyaan mahasiswa baru (maba).</li>
+                            <li>Pelaksanaan kegiatan Hello Camaba yang mencakup Zoom terkait SNBT dan SNBP, registrasi, serta penggunaan aplikasi UNNES.</li>
+                            <li>Pelaksanaan teknis mencakup pembagian penanggung jawab ke dalam lima breakout room.</li>
+                            <li>SNBP direncanakan sekitar awal April, dilanjutkan dengan SNBT.</li>
+                            <li>Akan dibuat grup Telegram khusus mahasiswa baru.</li>
                         </ul>
-                        <a href="https://bit.ly/AktivasiAkunPerpustakaanFH" target="_blank" rel="noopener" class="card-link">Form Aktivasi →</a>
+                        <div class="card-meta card-meta--multiline">
+                            <strong>CP:</strong>
+                            <span class="card-meta-line">Daffa Ahmad Nugraha — 089630147947</span>
+                            <span class="card-meta-line">Safitri Indah Lestari — 087741933011</span>
+                        </div>
+                        <a href="https://forms.gle/bgKTjfGjyFRknnjR6" target="_blank" rel="noopener noreferrer" class="card-link">Form Hello Camaba →</a>
                     </article>
-
-                    <!-- Pengawalan Isu -->
-                    <article class="card" id="pengawalan">
-                        <div class="card-icon" aria-hidden="true">📊</div>
-                        <h3 class="card-title">Pengawalan Isu</h3>
-                        <p class="card-desc">Bidang Advokesma BEM FH UNNES 2025 mengawal isu terkait pendidikan dan menyajikan infografis sebagai media pemasyarakatan kepada mahasiswa FH UNNES.</p>
-                        <a href="https://bit.ly/INFOGRAFISPENGAWALANISU2025" target="_blank" rel="noopener" class="card-link">Infografis Pengawalan Isu →</a>
+                    <article class="card" id="kesjah-klinik-adkesma">
+                        <div class="card-icon" aria-hidden="true">🩺</div>
+                        <h3 class="card-title">Klinik Adkesma</h3>
+                        <p class="card-desc">Merupakan wadah pengaduan, pendampingan, dan aspirasi bagi mahasiswa Fakultas Hukum Universitas Negeri Semarang. Klinik ini hadir sebagai kawan dengar untuk menciptakan ruang yang aman, nyaman, dan terpercaya bagi mahasiswa untuk
+                            menyampaikan keluhan, aspirasi, maupun permasalahan yang mereka alami. Klinik Adkesma melayani pengaduan terkait persoalan akademik maupun personal, kesejahteraan dan hak-hak mahasiswa, permasalahan keuangan, hingga pendampingan
+                            bagi mahasiswa yang mengalami kekerasan seksual. Dengan menjunjung tinggi prinsip kerahasiaan, empati, dan profesionalitas, Klinik Adkesma berkomitmen menjadi jembatan antara mahasiswa dan pihak fakultas demi terciptanya lingkungan
+                            kampus yang adil, aman, dan sejahtera.</p>
+                        <div class="card-meta">
+                            <strong>CP:</strong> Attaya Nanda Virgina — 081717445550
+                        </div>
+                        <a href="https://forms.gle/grUeQ8DD1fYo6ELg9" target="_blank" rel="noopener noreferrer" class="card-link">Form Klinik Adkesma →</a>
                     </article>
-
-                    <!-- Propaganda -->
-                    <article class="card" id="propaganda">
-                        <div class="card-icon" aria-hidden="true">🎨</div>
-                        <h3 class="card-title">Propaganda</h3>
-                        <p class="card-desc">Poster propaganda Advokesma BEM FH UNNES sebagai bentuk kepedulian terhadap isu-isu mahasiswa.</p>
-                        <a href="https://bit.ly/PROPAGANDAPENGAWALANISU2025" target="_blank" rel="noopener" class="card-link">Lihat Karya Propaganda →</a>
+                    <article class="card" id="kesjah-justifound">
+                        <div class="card-icon" aria-hidden="true">🔎</div>
+                        <h3 class="card-title">Justifound</h3>
+                        <p class="card-desc">JustiFound merupakan program Direktorat Jenderal Kesejahteraan Mahasiswa yang hadir sebagai ruang aman bagi mahasiswa Fakultas Hukum UNNES dalam melaporkan dan menemukan kembali barang yang hilang. Program ini bertujuan meningkatkan
+                            keamanan dan kenyamanan lingkungan kampus melalui sistem pelaporan yang mudah diakses, responsif, dan terkoordinasi, sehingga setiap laporan kehilangan maupun temuan dapat ditindaklanjuti secara efektif dan bertanggung jawab.</p>
+                        <div class="card-meta">
+                            <strong>CP:</strong> Muhammad Bagus Akbar Hamzawiy — 082264149244
+                        </div>
+                        <a href="https://forms.gle/nZZBnWcTMjHqyGyb7" target="_blank" rel="noopener noreferrer" class="card-link">Form Justifound →</a>
                     </article>
-
-                    <!-- Penjaringan Aspirasi -->
-                    <article class="card" id="aspirasi">
-                        <div class="card-icon" aria-hidden="true">💬</div>
-                        <h3 class="card-title">Penjaringan Aspirasi</h3>
-                        <p class="card-desc">Bidang Advokesma BEM FH UNNES membuka Penjaringan Aspirasi Mahasiswa FH UNNES sebagai komitmen menghimpun pandangan, kebutuhan, dan gagasan mahasiswa. Setiap aspirasi dicatat, dianalisis, dan ditindaklanjuti. Proses ini terbuka
-                            tanpa batas waktu.</p>
-                        <a href="https://bit.ly/PenjaringanAspirasiMahasiswaFH" target="_blank" rel="noopener" class="card-link">Sampaikan Aspirasi →</a>
+                    <article class="card" id="kesjah-beasiswa-maroon">
+                        <div class="card-icon" aria-hidden="true">🎓</div>
+                        <h3 class="card-title">Beasiswa Maroon</h3>
+                        <p class="card-desc">Beasiswa Maroon hadir untuk mendukung mahasiswa Fakultas Hukum UNNES dalam meringankan beban biaya Uang Kuliah Tunggal (UKT). Program ini diinisiasi di akhir periode kepengurusan BEM FH UNNES 2025 sebagai bentuk nyata kepedulian
+                            terhadap keberlangsungan pendidikan mahasiswa.</p>
+                        <p class="card-desc">Sumber pendanaan beasiswa ini diperoleh melalui kerja sama dengan mahasiswa, masyarakat di lingkungan FH UNNES, alumni FH UNNES, serta berbagai sponsor yang turut mendukung program ini. Beasiswa Maroon UNNES diharapkan dapat menjadi
+                            jembatan bagi mahasiswa untuk terus berprestasi tanpa terkendala masalah finansial.</p>
+                        <div class="card-meta card-meta--multiline">
+                            <strong>CP:</strong>
+                            <span class="card-meta-line">Aida Yulia Fatma — 083878473575</span>
+                            <span class="card-meta-line">Arja Rifda Romiza — 081352698813</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1q_fJqbP4MCdpECoK0yuuAHTueYzmihUd?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link">Dokumen Beasiswa Maroon (Google Drive) →</a>
                     </article>
+                </div>
+            </div>
+        </section>
 
-                    <!-- BKMF -->
-                    <article class="card" id="bkmf">
-                        <div class="card-icon" aria-hidden="true">🧠</div>
-                        <h3 class="card-title">Badan Konseling Mahasiswa Fakultas</h3>
-                        <p class="card-desc">BKMF FH UNNES adalah wadah untuk mendukung mahasiswa menghadapi tantangan pribadi, akademik, dan sosial. Siap menjadi teman diskusi dan memberikan panduan untuk keseimbangan hidup dan prestasi selama perkuliahan.</p>
-                        <a href="https://bit.ly/PendaftaranKonsultasiBKMFH" target="_blank" rel="noopener" class="card-link">Pendaftaran Konsultasi BKMF →</a>
-                    </article>
-
-                    <!-- Format Surat -->
-                    <article class="card" id="surat">
-                        <div class="card-icon" aria-hidden="true">📄</div>
-                        <h3 class="card-title">Format Surat-Surat Mahasiswa FH UNNES</h3>
-                        <p class="card-desc">Advokesma BEM FH UNNES menyiapkan format surat-surat yang diperlukan mahasiswa FH UNNES selama masa perkuliahan.</p>
-                        <a href="https://bit.ly/FormatSuratMahasiswaFHUNNES2025" target="_blank" rel="noopener" class="card-link">Akses Format Surat →</a>
+        <!-- Surat-Menyurat -->
+        <section class="layanan content-section" id="section-surat">
+            <div class="container">
+                <h2 class="section-title">Surat-Menyurat</h2>
+                <p class="section-subtitle">Informasi alur administrasi surat, berkas pendukung, dan kanal komunikasi bidang Surat-Menyurat Adkesma BEM FH UNNES.</p>
+                <div class="cards">
+                    <article class="card" id="surat-informasi">
+                        <div class="card-icon" aria-hidden="true">📋</div>
+                        <h3 class="card-title">Informasi &amp; berkas</h3>
+                        <p class="card-desc">Nanti akan ada alur terkait peminjaman ruangan, permohonan surat magang, permohonan cuti, dan permohonan pengunduran diri. Seluruh pembaruan formulir, panduan, dan dokumen pendukung akan dipublikasikan melalui folder Google Drive
+                            resmi di bawah ini.</p>
+                        <ul class="card-list">
+                            <li>Peminjaman ruangan</li>
+                            <li>Permohonan surat magang</li>
+                            <li>Permohonan cuti</li>
+                            <li>Permohonan pengunduran diri</li>
+                        </ul>
+                        <div class="card-meta card-meta--multiline">
+                            <strong>CP:</strong>
+                            <span class="card-meta-line">Nayla Zaskia Nandini — +62 877-2783-0809</span>
+                            <span class="card-meta-line">Farah Widya — +62 858-0614-0444</span>
+                            <span class="card-meta-line">Galio Geld — +62 882-6255-2052</span>
+                        </div>
+                        <a href="https://drive.google.com/drive/folders/1j9zWPhggU_rzFlomwIClaK2kAKE7Yx1e?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link">Folder berkas &amp; dokumen Surat-Menyurat (Google Drive) →</a>
                     </article>
                 </div>
             </div>
@@ -207,9 +303,10 @@
             <div class="container">
                 <h2 class="section-title">Tentang Halo Advo</h2>
                 <p class="tentang-text">
-                    <strong>Halo Advo</strong> mempersatukan semua kanal divisi bantuan Bidang Advokesma BEM FH UNNES untuk mahasiswa FH UNNES. Dari kendala UKT, beasiswa, lost and found, konseling, hingga format surat—semua bisa diakses dari satu tempat.
+                    <strong>Halo Advo</strong> memuat tiga area utama—Advokasi, Kesejahteraan Mahasiswa, dan Surat-Menyurat—supaya informasi program kerja, agenda, dan layanan surat lebih terstruktur untuk mahasiswa FH UNNES.
                 </p>
                 <p class="tentang-meta">BEM FH UNNES 2025 · Bidang Advokesma</p>
+                <p class="tentang-footnote">Kontak, saluran WhatsApp, Instagram, dan email Adkesma dapat diakses melalui ikon di bagian footer.</p>
             </div>
         </section>
     </main>
@@ -218,18 +315,39 @@
         <div class="container">
             <p class="footer-brand">Halo Advo · Advokesma BEM FH UNNES 2025</p>
             <p class="footer-credit">Kampus Sekaran, Fakultas Hukum Universitas Negeri Semarang</p>
+            <div class="footer-kontak" aria-label="Kontak Adkesma BEM FH UNNES">
+                <p class="footer-kontak-label">Ikuti &amp; hubungi Adkesma</p>
+                <div class="footer-social" role="group">
+                    <a href="https://whatsapp.com/channel/0029VbBuCS17dmeU31Ss3p1K" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Saluran WhatsApp ADKESMA BEM FH UNNES" title="Saluran WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/adkesmabemfhunnes/" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram @adkesmabemfhunnes" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                    <a href="mailto:adkesmabemfhunnes2026@gmail.com" class="footer-social-link" aria-label="Email adkesmabemfhunnes2026@gmail.com" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-social-caption">ADKESMA BEM FH UNNES · @adkesmabemfhunnes · adkesmabemfhunnes2026@gmail.com</p>
+            </div>
         </div>
     </footer>
 
     <script>
-      (function () {
-        var base = (location.hostname === 'github.io' || location.pathname.indexOf('/BEM-UNES') === 0)
-          ? '/BEM-UNES/' : './';
-        var s = document.createElement('script');
-        s.src = base + 'script.js';
-        s.async = false;
-        document.body.appendChild(s);
-      })();
+        (function() {
+            var base = (location.hostname === 'github.io' || location.pathname.indexOf('/BEM-UNES') === 0) ?
+                '/BEM-UNES/' : './';
+            var s = document.createElement('script');
+            s.src = base + 'script.js';
+            s.async = false;
+            document.body.appendChild(s);
+        })();
     </script>
 </body>
 

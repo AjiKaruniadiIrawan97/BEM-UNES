@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Sampel hero 1  ganti dengan foto JPG/PNG Anda">
+  <defs>
+    <linearGradient id="a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a0808"/>
+      <stop offset="45%" stop-color="#8b0000"/>
+      <stop offset="100%" stop-color="#5c1010"/>
+    </linearGradient>
+    <pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse">
+      <circle cx="40" cy="40" r="1.2" fill="#fff" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#a)"/>
+  <rect width="1600" height="900" fill="url(#p)"/>
+  <text x="800" y="460" text-anchor="middle" fill="#fff" opacity="0.12" font-family="system-ui,sans-serif" font-size="56" font-weight="700">slide-1</text>
+  <text x="800" y="530" text-anchor="middle" fill="#fff" opacity="0.08" font-family="system-ui,sans-serif" font-size="22">Letakkan slide-1.jpg atau .png di folder ini</text>
+</svg>
